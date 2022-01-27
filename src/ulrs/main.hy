@@ -1,7 +1,7 @@
 (import
-  reader
-  evaluater
-  printer)
+  fire [Fire]
+
+  ulrs [reader evaluater printer])
 (require hyrule *)
 
 
@@ -13,6 +13,5 @@
     (while True
       (-> (r.read) e.eval p.print))))
 
-(when (= __name__ "__main__") ;; For easier testing
-  (import fire)
-  (fire.Fire run))
+(defmain [#* args]
+  (Fire run))

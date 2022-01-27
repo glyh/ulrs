@@ -12,3 +12,11 @@ It should work for any lisps or their dialects, as long as it support nREPL.
 - [ ] Better UI
 - [ ] History view, like the one in [ptpython](https://github.com/prompt-toolkit/ptpython)
 - [ ] Parinfer mode
+- [ ] Shell & Lisp Hybrid DSL
+
+## How to use?
+```shell
+git clone https://github.com/glyh/ulrs.git
+pip install ./
+ulrs
+```

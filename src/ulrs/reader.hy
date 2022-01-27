@@ -3,8 +3,8 @@
   prompt-toolkit.lexers [PygmentsLexer]
   prompt_toolkit.auto_suggest [AutoSuggestFromHistory]
 
-  lexer [lisp-lexers]
-  ui [bottom-toolbar])
+  ulrs.lexer [lisp-lexers]
+  ulrs.ui [bottom-toolbar])
 (defclass Reader []
   (defn __init__ [self language]
     (setv self.session (PromptSession)

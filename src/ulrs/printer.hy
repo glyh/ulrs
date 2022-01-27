@@ -4,7 +4,7 @@
   prompt-toolkit.formatted-text [PygmentsTokens]
   prompt-toolkit [print-formatted-text]
 
-  lexer [lisp-lexers])
+  ulrs.lexer [lisp-lexers])
 (defclass Printer []
   (defn __init__ [self language]
     (setv self.lexer ((get lisp-lexers language))))
