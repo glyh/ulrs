@@ -1,6 +1,6 @@
 ## ULRS
 
-ULRS is a Lisp REPL & Shell for all lisp dialects (as long as it support nREPL). It is powered by [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) and [nREPL](https://nrepl.org/).
+ULRS is a Lisp REPL & Shell for all lisp dialects (as long as it support nREPL). It is powered by [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit), [fire](https://github.com/google/python-fire) and [nREPL](https://nrepl.org/).
 
 It should work for any lisps or their dialects, as long as it support nREPL.
 
