@@ -10,8 +10,7 @@
   (let [r (reader.Reader lang)
         e (evaluater.Evaluater host port)
         p (printer.Printer lang)]
-    (while True
-      (-> (r.read) e.eval p.print))))
+    (->> (r.read) e.eval p.print (while True))))
 
 (defmain [#* args]
   (Fire run))

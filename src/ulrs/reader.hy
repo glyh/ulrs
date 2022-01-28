@@ -11,12 +11,16 @@
           self.lexer (PygmentsLexer (get lisp-lexers language))
           self.suggest (AutoSuggestFromHistory)))
   (defn read [self]
-    (try
-      (self.session.prompt
-       "> "
-       :lexer self.lexer
-       :bottom-toolbar bottom-toolbar
-       :mouse_support True
-       :auto_suggest self.suggest)
-      (except [EOFError]
-        (exit 0)))))
+    (while True
+      (try
+        (return
+          (self.session.prompt
+           "> "
+           :lexer self.lexer
+           :bottom-toolbar bottom-toolbar
+           :mouse_support True
+           :auto_suggest self.suggest))
+       (except [KeyboardInterrupt]
+         (continue))
+       (except [EOFError]
+         (exit 0))))))
