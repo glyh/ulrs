@@ -13,4 +13,4 @@
     (->> (r.read) e.eval p.print (while True))))
 
 (defmain [#* args]
-  (Fire run))
+  (Fire run :name "ulrs"))

@@ -4,6 +4,10 @@ ULRS is a Lisp REPL & Shell for all lisp dialects (as long as it support nREPL).
 
 It should work for any lisps or their dialects, as long as it support nREPL.
 
+## Project status
+
+Archived. I personally did not found this is useful, because the REPL integration inside of IDEs/Editors are so powerful. there's really no reason to use a standalone RPEL.
+
 ## RoadMap
 - [x] Basic readline functions
 - [x] Syntax highlight
@@ -17,6 +21,7 @@ It should work for any lisps or their dialects, as long as it support nREPL.
 ## How to use?
 ```shell
 git clone https://github.com/glyh/ulrs.git
+cd ulrs
 pip install ./
 ulrs
 ```

@@ -1,10 +1,12 @@
 (import
   prompt-toolkit [PromptSession]
   prompt-toolkit.lexers [PygmentsLexer]
-  prompt_toolkit.auto_suggest [AutoSuggestFromHistory]
+  prompt-toolkit.auto-suggest [AutoSuggestFromHistory]
+  prompt-toolkit.completion [Completer Completion]
 
   ulrs.lexer [lisp-lexers]
   ulrs.ui [bottom-toolbar])
+
 (defclass Reader []
   (defn __init__ [self language]
     (setv self.session (PromptSession)

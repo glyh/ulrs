@@ -9,12 +9,16 @@
         (print "Failed to connect to nREPL server")
         (exit 1))))
   (defn eval [self code]
+    (import sys)
     (try
       (self.connection.write
-        {"op" "eval"
-         "code" code})
+        {"code" code
+         "op" "eval"})
       (let [result (self.connection.read)]
-        (self.connection.read)
+        (print result :file sys.stderr)
+        (print
+          (self.connection.read)
+          :file sys.stderr)
         (get result "value"))
       (except [BrokenPipeError]
         (print "Connection Lost")
